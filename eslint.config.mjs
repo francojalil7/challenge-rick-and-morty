@@ -2,7 +2,7 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
-import {fixupPluginRules} from "@eslint/compat";
+import { fixupPluginRules } from "@eslint/compat";
 import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 import eslintPluginImport from "eslint-plugin-import";
 import eslintPluginReactCompiler from "eslint-plugin-react-compiler";
@@ -22,11 +22,23 @@ export default [
     rules: {
       "padding-line-between-statements": [
         "warn",
-        {blankLine: "always", prev: "*", next: ["return", "export"]},
-        {blankLine: "always", prev: ["const", "let", "var"], next: "*"},
-        {blankLine: "any", prev: ["const", "let", "var"], next: ["const", "let", "var"]},
+        { blankLine: "always", prev: "*", next: ["return", "export"] },
+        { blankLine: "always", prev: ["const", "let", "var"], next: "*" },
+        {
+          blankLine: "any",
+          prev: ["const", "let", "var"],
+          next: ["const", "let", "var"],
+        },
       ],
       "no-console": "warn",
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          args: "after-used",
+          ignoreRestSiblings: false,
+          argsIgnorePattern: "^_.*?$",
+        },
+      ],
     },
   },
   // React configuration
