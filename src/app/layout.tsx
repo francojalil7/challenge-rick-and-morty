@@ -31,7 +31,7 @@ export default function RootLayout({
         <I18nProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div id="portal-root" className="fixed top-0 left-0 z-[9999]"></div>
-            <div className="container m-auto grid min-h-screen grid-rows-[auto_1fr_auto] gap-5 relative">
+            <div className="container m-auto grid gap-5 grid-rows-[auto_1fr_auto] gap-3relative">
               <Header />
               <main>{children}</main>
               <Footer />

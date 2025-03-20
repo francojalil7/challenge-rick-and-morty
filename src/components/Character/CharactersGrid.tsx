@@ -15,16 +15,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CharacterProps } from "@/types/Charactets";
 
 interface CharactersGridProps {
-  title: string;
   onSelectCharacter: (character: CharacterProps | null) => void;
+  initialPage: number;
 }
 
 export const CharactersGrid = ({
-  title,
   onSelectCharacter,
+  initialPage,
 }: CharactersGridProps) => {
   const { t } = useTranslation();
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(initialPage);
   const { characters, totalPages } = useCharacters(currentPage);
   const [selectedCharacterId, setSelectedCharacterId] = useState<number | null>(
     null
@@ -55,10 +55,8 @@ export const CharactersGrid = ({
     }
   };
   return (
-    <div className="flex-1 h-[50vh] border rounded-lg flex flex-col">
-      <h1 className="p-4">
-        {t("characters")} {title}
-      </h1>
+    <div className="flex-1 h-[40vh] border rounded-lg flex flex-col">
+      <h1 className="p-4">{t("selectCharacters")}</h1>
       <div className="flex-1 overflow-y-auto hide-scrollbar">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
           {characters.map((character) => (

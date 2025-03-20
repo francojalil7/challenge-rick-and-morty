@@ -35,12 +35,14 @@ export const CharacterCard = ({
           <h2 className="font-medium text-sm mb-1">
             {name.split(" ").slice(0, 2).join(" ")}
           </h2>
-          <Badge
-            className={status === "Alive" ? "bg-green-400" : "bg-gray-300"}
-          >
-            {status}
-          </Badge>
-          <p className="font-medium text-xs m-0.5">{species}</p>
+          <div className="flex flex-row gap-1" style={{ alignItems: "center" }}>
+            <Badge
+              className={status === "Alive" ? "bg-green-400" : "bg-gray-300"}
+            >
+              {status}
+            </Badge>
+            <p className="font-medium text-xs m-0.5">{species}</p>
+          </div>
         </div>
       </div>
     </div>

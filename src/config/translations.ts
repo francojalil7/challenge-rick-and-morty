@@ -15,6 +15,11 @@ export const translations = {
         season: "Season",
         episodeName: "Title",
         airDate: "Air date",
+        noCoincidence:"No coincidence of Episodes.",
+        episodes:"Episodes",
+        selectCharacters:"Select a character:",
+        titleEpisodeList:"Character #",
+        titleSharedList:"Shared Episodes",
       },
     },
     es: {
@@ -31,6 +36,11 @@ export const translations = {
         season:"Temporada",
         episodeName:"Título",
         airDate:"Fecha de emisión",
+        noCoincidence:"No hay coincidencia de Episodios.",
+        selectCharacters:"Seleccione algún personaje:",
+        episodes:"Episodios",
+        titleEpisodeList:"Personaje #",
+        titleSharedList:"Episodios compartidos",
       },
     },
   };

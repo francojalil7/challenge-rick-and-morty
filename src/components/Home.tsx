@@ -7,16 +7,24 @@ export const Home = () => {
   const [firstCharacter, setFirstCharacter] = useState<CharacterProps | null>(
     null
   );
-  console.log("🚀 ~ Home ~ firstCharacter:", firstCharacter);
+
   const [secondCharacter, setSecondCharacter] = useState<CharacterProps | null>(
     null
   );
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       <div className="flex flex-row gap-4">
-        <CharactersGrid title={"1"} onSelectCharacter={setFirstCharacter} />
-        <CharactersGrid title={"2"} onSelectCharacter={setSecondCharacter} />
+        <CharactersGrid
+          title={"1"}
+          onSelectCharacter={setFirstCharacter}
+          initialPage={1}
+        />
+        <CharactersGrid
+          title={"2"}
+          onSelectCharacter={setSecondCharacter}
+          initialPage={2}
+        />
       </div>
       <EpisodeGrid
         firstCharacter={firstCharacter}
