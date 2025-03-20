@@ -120,3 +120,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Add this to your existing CSS file */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
