@@ -15,13 +15,8 @@ export const Home = () => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-row gap-4">
+        <CharactersGrid onSelectCharacter={setFirstCharacter} initialPage={1} />
         <CharactersGrid
-          title={"1"}
-          onSelectCharacter={setFirstCharacter}
-          initialPage={1}
-        />
-        <CharactersGrid
-          title={"2"}
           onSelectCharacter={setSecondCharacter}
           initialPage={2}
         />

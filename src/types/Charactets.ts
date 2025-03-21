@@ -23,7 +23,7 @@ export interface CharacterProps {
     created: string;
   }
 
-type Prev = number | null
+type Prev = string | null
 export interface InfoProps {
     count: number
     pages: number

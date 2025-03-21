@@ -26,7 +26,6 @@ export const EpisodeGrid = ({
   const shaderEpisodes = episodesFirstCharacter?.filter((ep) =>
     episodesSecondCharacter?.includes(ep)
   );
-  console.log("🚀 ~ shaderEpisodes:", shaderEpisodes);
 
   const tableConfigs = [
     {
@@ -50,7 +49,7 @@ export const EpisodeGrid = ({
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-3 h-[38vh]">
+    <div className="grid grid-cols-3 gap-3 h-[35vh]">
       {tableConfigs.map((config, index) => (
         <div>
           <h1 className="pb-2">{config.title}</h1>

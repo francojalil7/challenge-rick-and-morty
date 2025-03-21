@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getEpisodes } from "../services/episodes";
-import { EpisodeProps, FetchedEpisodeProps } from "@/types/Episodes";
+import { EpisodeProps } from "@/types/Episodes";
 
 interface useEpisodeProps {
   loading: boolean;
@@ -15,12 +15,11 @@ export const useEpisodes = (episode?: string): useEpisodeProps => {
 
   useEffect(() => {
     if (!episode) return setEpisodes([]);
-    console.log("adsjkdsajk");
+
     const fetch = async () => {
       try {
         const data = await getEpisodes(episode);
         const response = data as EpisodeProps[];
-        console.log("🚀 ~ fetch ~ response:", [response]);
 
         if (Array.isArray(response)) {
           setEpisodes(response);

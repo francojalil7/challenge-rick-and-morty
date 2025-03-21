@@ -7,7 +7,7 @@ interface CharacterCardProps {
   status: string;
   image: string;
   onClick: () => void;
-  selected: boolean; // Add selected prop
+  selected: boolean;
 }
 
 export const CharacterCard = ({
