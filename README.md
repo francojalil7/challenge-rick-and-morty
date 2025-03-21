@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Challenge - Rick and Morty
 
-## Getting Started
+ La aplicación fue desarrollada utilizando **[tecnologías utilizadas, por ejemplo: React, Next.js, TypeScript, Shadcn]**, siguiendo buenas prácticas de desarrollo y asegurando un código limpio y modular.
 
-First, run the development server:
+## Tecnologías y Herramientas
+
+- **Framework/Librería**: [Next.js]
+- **Lenguaje**: TypeScript 
+- **Estilos**: [Tailwind CSS, Shadcn]
+- **Estado global**: Por el tamaño de la aplicación y tiempo intenté evitar el uso de gestores de estado como podrían ser Redux o Zustand
+- **Manejo de datos**: Axios, lo elegí su escabilidad al poder crear una única instancia y la capacidad de poder pasar Header en algunos casos aunque no aproveché estás característias
+- **Formateo y Linting**: ESLint, para mantener reglas en mi codigo 
+
+## Instalación y Ejecución
+
+Sigue estos pasos para clonar y ejecutar el proyecto en local:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clonar el repositorio
+git clone https://github.com/tuusuario/nombre-del-repo.git
+
+# Entrar en el directorio
+cd nombre-del-repo
+
+# Instalar dependencias
+npm install  # o yarn install # o pnpm install
+
+# Iniciar la aplicación
+yarn dev  # o npm run dev # o pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Características Implementadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [ ] **Diseño responsivo**: La interfaz se adapta a distintos tamaños de pantalla mientras sea posible intenté hacerlo lo más posible dentro de los tiempos en los que desarollé
+- [ ] **Consumo de API**: Se obtienen datos desde (https://rickandmortyapi.com/)
+- [ ] **Componentes reutilizables**: Se crearon componentes reutilizables para mejorar la mantenibilidad y sobre todo escabilidad, respetando responsabilidades
+- [ ] **Manejo de estado**: Implementación de un pequeño Context para la gestión de estado de las traducciones
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Mejoras y Aspectos a Optimizar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] [Mejora 1, por ejemplo: Mejorar el flujo completo de las aprtes más importantes de la aplicación  con Jest y React Testing Library (como la selección de episodios o de personajes)]
+- [ ] [Mejora 2, por ejemplo: Optimizar el rendimiento con lazy loading]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Cierre
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dentro de los tiempos que tuve estos días para realizar el proyecto si bien siento que hay cosas que se podrían optimizar o muchas más que me gustaría haber agregado a nivel diseño y usabilidad siento que dentro de todo quedo bastante conforme con el resultado porque intenté implementar todas las mejores práctocas en lo que me fue posible. 
+Quedo atento a cualquier comentario y a disposición para lo que necesiten
