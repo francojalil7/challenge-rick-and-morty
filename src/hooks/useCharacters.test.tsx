@@ -55,13 +55,14 @@ describe("useCharacters", () => {
 
     const { result } = renderHook(() => useCharacters(1));
 
+    // Esperar a que todas las actualizaciones de estado se completen
     await waitFor(() => {
       expect(result.current.loading).toBe(false);
+      expect(result.current.characters).toEqual(mockData.results);
+      expect(result.current.totalPages).toBe(mockData.info.pages);
     });
 
     expect(result.current.error).toBe(false);
-    expect(result.current.characters).toEqual(mockData.results);
-    expect(result.current.totalPages).toBe(mockData.info.pages);
     expect(getCharacters).toHaveBeenCalledWith({ page: 1 });
   });
 
